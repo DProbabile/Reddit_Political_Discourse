@@ -34,7 +34,7 @@ communities and the formation of echo chambers across interaction and informatio
 │
 ├── notebooks/
 │ ├── community_characteristics.ipynb 
-│ ├── polarizarion_analysis.ipynb
+│ ├── polarization_analysis.ipynb
 │ ├── echo_chamber_validation.ipynb
 │ └── distance_analysis.ipynb
 │

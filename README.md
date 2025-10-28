@@ -75,23 +75,24 @@ You can expand this area with additional notes or usage examples.
 ## Analysis pipeline
 
 1. **Data import and filtering**  
-   - Load Reddit Politosphere and Pushshift datasets; restrict to political subreddits.  
-   - Apply RCA normalization and build bipartite matrices (users–subreddits, subreddits–domains).
+   - Load the Reddit Politosphere and Pushshift datasets and restrict the analysis to political subreddits.  
+   - Build bipartite matrices (users–subreddits and subreddits–domains) and apply RCA-based binarization to normalize user activity and subreddit popularity.
 
 2. **Validated projections**  
-   - Perform BiCM/BiWCM validation (FDR correction) to retain significant co-occurrences.
+   - Perform BiCM validation (FDR correction) to retain significant co-occurrences.
 
 3. **Community detection**  
-   - Identify political communities (Louvain / Infomap / SBM).
+   - Identify political communities using Louvain, Infomap, or SBM algorithms.
 
 4. **Polarization metrics**  
-   - Compute polarization index ρ and participation asymmetries.
+   - Compute the polarization index (ρ) both in terms of validated network communities and in terms of groups of subreddits sharing the same topical or ideological tags.
 
 5. **Echo-chamber validation**  
-   - Measure overlaps between interaction and information communities using BiWCM.
+   - Measure overlaps between interaction and information communities by assigning weights to users active in subreddits shared by both communities.  
+   - Apply BiWCM-based statistical validation to identify significant overlaps beyond random expectation.
 
 6. **Statistical testing and visualization**  
-   - Apply KS and Mann–Whitney tests; visualize partitions and matrices.
+   - Apply Kolmogorov–Smirnov and Mann–Whitney tests; visualize partitions, polarization matrices, and echo-chamber structures.
 
 
 ## Data availability
@@ -179,7 +180,8 @@ please document them here using the same template.
     ([arXiv:2504.10444](https://arxiv.org/abs/2504.10444)).  
     Contact authors for access or replication details.
 
-- RCA filtering: activity normalization before validation  
+- RCA filtering: activity normalization before validation
+- FDR correction: 
 - Community detection: [NetworkX](https://networkx.org/), [igraph](https://igraph.org/python/), [Infomap](https://www.mapequation.org/), [graph-tool](https://graph-tool.skewed.de/)  
 - Statistical tests: [SciPy](https://scipy.org/)  
 - Visualization: Matplotlib, Plotly, Sankey diagrams, chord plots  
@@ -190,7 +192,7 @@ please document them here using the same template.
 
 Random seeds fixed for community detection.  
 FDR correction applied to validated links and overlap matrices.  
-Results consistent across detection algorithms (Louvain, Infomap, SBM).  
+Community detection results consistent across detection algorithms (Louvain, Infomap, SBM).  
 BiWCM implementation available upon request for reproducibility purposes.
 
 ---

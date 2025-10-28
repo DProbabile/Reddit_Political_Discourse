@@ -129,13 +129,13 @@ allowing all notebooks to run on a small, representative example.
 
 **Example — user–subreddit bipartite data**
 
-| user_id | subreddit | num. comments | RCA 
-|----------|------------|----------|-----|
-| u12345   | politics   | 42       | 1.21 | 
-| u45678   | The_Donald | 58       | 1.45 | 
-| u91011   | worldnews  | 6        | 0.98 | 
+| user_id | subreddit | num. comments 
+|----------|------------|----------|
+| u12345   | politics   | 42       | 
+| u45678   | The_Donald | 58       | 
+| u91011   | worldnews  | 6        |  
 
-**Example 3 — auxiliary dictionaries**
+**Example 2 — auxiliary dictionaries**
 
 ```json
 {

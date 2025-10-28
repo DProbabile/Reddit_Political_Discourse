@@ -20,7 +20,6 @@ communities and the formation of echo chambers across interaction and informatio
 │ ├── sample_subset/ # <--- minimal dataset for replication 
 │ │ ├── users_subreddits_subset.parquet
 │ │ └── subreddits_domains_subset.parquet
-│ └── (no raw Reddit data included)
 │
 ├── src/ # core modules (your code)
 │ ├── label_colors.py

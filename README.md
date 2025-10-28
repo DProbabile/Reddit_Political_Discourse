@@ -42,7 +42,7 @@ Reddit_Political_Discourse/
 
 ---
 
-## 🧩 Overview
+## Overview
 
 The analysis is based on two complementary bipartite layers:
 
@@ -59,7 +59,7 @@ jointly shape echo chambers and political polarization.
 
 ---
 
-## ⚙️ Function overview
+## Function overview
 
 This section briefly outlines the role of the main functions provided in `src/`.  
 You can expand this area with additional notes or usage examples.
@@ -73,11 +73,8 @@ You can expand this area with additional notes or usage examples.
 | `distance_in_network.py` | Computes distances between validated subnetworks or user groups |
 | `utils.py` | Helper functions: normalization dictionaries, FDR correction, reproducibility controls |
 
-🟦 *You can add short code snippets or explanations here for specific functions if needed.*
 
----
-
-## 🧠 Analysis pipeline
+## Analysis pipeline
 
 1. **Data import and filtering**  
    - Load Reddit Politosphere and Pushshift datasets; restrict to political subreddits.  
@@ -98,7 +95,6 @@ You can expand this area with additional notes or usage examples.
 6. **Statistical testing and visualization**  
    - Apply KS and Mann–Whitney tests; visualize partitions and matrices.
 
----
 
 ## 📚 Data availability
 
@@ -112,14 +108,13 @@ All data used in this study are publicly available:
 
 Raw Reddit data are **not included** in this repository.
 
----
 
-## 📁 Data subsets for replication
+##  Data subsets for replication
 
 To facilitate replication without accessing the full Reddit datasets,  
 this repository includes small preprocessed subsets and auxiliary structures under `data/sample_subset/`.
 
-### 🔹 Files
+###  Files
 
 | File | Description |
 |------|--------------|
@@ -131,9 +126,8 @@ this repository includes small preprocessed subsets and auxiliary structures und
 These files reproduce the internal structure used in the paper’s code base,  
 allowing all notebooks to run on a small, representative example.
 
----
 
-### 🔹 Example structures
+### Example structures
 
 **Example — user–subreddit bipartite data**
 

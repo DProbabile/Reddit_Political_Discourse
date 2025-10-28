@@ -4,6 +4,7 @@ pandas
 scipy
 statsmodels
 scikit-learn
+random
 
 # --- Network analysis and validation ---
 networkx

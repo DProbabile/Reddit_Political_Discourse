@@ -1,13 +1,25 @@
+# --- Core scientific libraries ---
 numpy
 pandas
 scipy
 statsmodels
-matplotlib
-networkx
-python-igraph
-infomap
-tqdm
-bicm
-plotly
+scikit-learn
 
-chord, sbm, infomap...
+# --- Network analysis and validation ---
+networkx
+python-louvain
+python-igraph
+graph-tool
+infomap
+bicm
+
+# --- Visualization and interactive tools ---
+matplotlib
+seaborn
+plotly
+d3blocks
+
+# --- Data handling and utilities ---
+squilte3
+json5
+tqdm

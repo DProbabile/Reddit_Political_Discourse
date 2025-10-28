@@ -11,8 +11,7 @@ communities and the formation of echo chambers across interaction and informatio
 
 ## Repository structure
 
-
-Reddit_Political_Discourse/
+```Reddit_Political_Discourse/
 │
 ├── README.md
 ├── requirements.txt
@@ -38,8 +37,7 @@ Reddit_Political_Discourse/
 │ └── 03_distance_analysis.ipynb
 │
 └── figures/ # optional plots generated in notebooks
-
-
+```
 ---
 
 ## Overview

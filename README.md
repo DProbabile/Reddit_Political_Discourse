@@ -184,7 +184,7 @@ please document them here using the same template.
 - [FDR](http://www.jstor.org/stable/2346101) correction
 - Community detection: [NetworkX](https://networkx.org/), [igraph](https://igraph.org/python/), [Infomap](https://www.mapequation.org/), [graph-tool](https://graph-tool.skewed.de/)  
 - Statistical tests: [SciPy](https://scipy.org/)  
-- Visualization: [Matplotlib](https://matplotlib.org), [Plotly](https://plotly.com/python/), [Gephi](http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154), [d3blocks](https://github.com/d3blocks/d3blocks)(https://github.com/d3blocks/d3blocks)]
+- Visualization: [Matplotlib](https://matplotlib.org), [Plotly](https://plotly.com/python/), [Gephi](http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154), [d3blocks](https://github.com/d3blocks/d3blocks)
   
 
 ---

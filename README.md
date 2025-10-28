@@ -36,7 +36,7 @@ communities and the formation of echo chambers across interaction and informatio
 │ ├── echo_chamber_validation.ipynb
 │ └── distance_analysis.ipynb
 │
-└── figures/ -plots generated in notebooks
+└── figures/ plots generated in notebooks
 ```
 ---
 

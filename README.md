@@ -16,13 +16,13 @@ communities and the formation of echo chambers across interaction and informatio
 ├── README.md
 ├── requirements.txt
 │
-├── data/
-│ ├── sample_subset/ # <--- minimal dataset for replication 
-│ │ ├── users_subreddits_subset.parquet
-│ │ ├── subreddit_labels.json
-│ │ ├── user_normalization_dict.json
-│ │ ├── information_community_ex.pkl
-| | └── interaction_community_ex.pkl
+├── data/ <--- minimal dataset for replication   
+│ ├── users_subreddits_subset.parquet
+│ ├── subreddit_labels.json
+│ ├── user_normalization_dict.json
+│ ├── information_community_ex.pkl
+│ ├── interaction_community_ex.pkl
+| └── interaction_network_edgelist_ex.pkl
 
 │
 ├── src/ # core modules (your code)
@@ -123,7 +123,9 @@ this repository includes small preprocessed subsets and auxiliary structures und
 | `users_subreddits_subset.parquet` | Bipartite user–subreddit interactions (comments or participation counts) |
 | `subreddit_labels.json` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
 | `user_normalization_dict.json` | Auxiliary dictionary for polarization-normalization |
-| `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community  
+| `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community |
+| `interaction_network_edgelist_ex.pkl` | Validated subreddit–subreddit projection (edgelist) obtained from the users–subreddits bipartite network using BiCM |  
+
 obtained from statistically validated projections of the 2013 
 bipartite networks |
 | `information_community_ex.pkl` | dictionary mapping nodes to their detected community  

@@ -23,7 +23,6 @@ communities and the formation of echo chambers across interaction and informatio
 │ ├── information_community_ex.pkl
 │ ├── interaction_community_ex.pkl
 | └── interaction_network_edgelist_ex.pkl
-
 │
 ├── src/ # core modules (your code)
 │ ├── label_colors.py

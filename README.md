@@ -9,7 +9,7 @@ users, subreddits, and external domains.
 Statistically validated projections (BiCM/BiWCM) reveal the structure of political
 communities and the formation of echo chambers across interaction and information layers.
 
-## 📦 Repository structure
+## Repository structure
 
 
 Reddit_Political_Discourse/

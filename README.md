@@ -18,7 +18,8 @@ communities and the formation of echo chambers across interaction and informatio
 │
 ├── data/ <--- minimal dataset for replication   
 │ ├── users_subreddits_subset.parquet
-│ ├── subreddit_labels.json
+│ ├── Subreddit_Tags.csv
+│ ├── Tag_Color.csv
 │ ├── user_normalization_dict.json
 │ ├── information_community_ex.pkl
 │ ├── interaction_community_ex.pkl
@@ -121,7 +122,8 @@ this repository includes small preprocessed subsets and auxiliary structures und
 | File | Description |
 |------|--------------|
 | `users_subreddits_subset.parquet` | Bipartite user–subreddit interactions (comments or participation counts) |
-| `subreddit_labels.json` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
+| `Subreddit_Tags.csv` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
+| `Tag_Color.csv` | Color mapping for topic tags |
 | `user_normalization_dict.json` | Auxiliary dictionary for polarization-normalization |
 | `information_community_ex.pkl` | dictionary mapping nodes to their detected community obtained from statistically validated projections of the 2013 domains-subreddits networks |
 | `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community obtained from statistically validated projections of the 2013 users-subreddits networks |
@@ -139,7 +141,8 @@ allowing all notebooks to run on a small, representative example.
 
 ### Example structures
 
-**Example — user–subreddit bipartite data**
+**Example 
+— user–subreddit bipartite data**
 
 | user_id | subreddit | num. comments 
 |----------|------------|----------|
@@ -147,7 +150,7 @@ allowing all notebooks to run on a small, representative example.
 | u45678   | The_Donald | 58       | 
 | u91011   | worldnews  | 6        |  
 
-**Example 2 — auxiliary dictionaries**
+— auxiliary dictionaries**
 
 ```json
 {
@@ -155,18 +158,19 @@ allowing all notebooks to run on a small, representative example.
     "u12345": ["politics", "hillaryclinton", "worldnews"],
     "u45678": ["The_Donald", "conservative", "AskTrumpSupporters"],
     "u91011": ["socialism", "progressive", "NeutralPolitics"]
-  },
-  "subreddit_labels": {
-    "politics": "Democrat",
-    "hillaryclinton": "Democrat",
-    "The_Donald": "Conservative",
-    "conservative": "Conservative",
-    "socialism": "Far-Left",
-    "progressive": "Left",
-    "NeutralPolitics": "Neutral",
-    "worldnews": "Neutral"
-  }
+   }
 }
+```
+```csv
+subreddit,tag
+politics,Democrat
+hillaryclinton,Democrat
+The_Donald,Conservative
+conservative,Conservative
+socialism,Far-Left
+progressive,Left
+NeutralPolitics,Neutral
+worldnews,Neutral
 ```
 
 Each key corresponds to a structure used in the analysis:  

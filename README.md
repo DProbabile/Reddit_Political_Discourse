@@ -64,12 +64,12 @@ You can expand this area with additional notes or usage examples.
 
 | Module | Purpose |
 |--------|----------|
-| `label_colors.py` | Maps community tags to consistent color schemes |
-| `community_detection.py` | Runs Louvain / Infomap / SBM; supports consensus and relabeling |
-| `polarization_metrics.py` | Computes user polarization metrics (e.g., polarization index ρ, tag distributions) |
-| `echo_chamber_matrix.py` | Builds overlap matrices between user and domain communities; validates overlaps via BiWCM |
-| `distance_in_network.py` | Computes distances between validated subnetworks or user groups |
-| `utils.py` | Helper functions: normalization dictionaries, FDR correction, reproducibility controls |
+| `label_colors.py` | Maps community tags to consistent label–color schemes |
+| `community_detection.py` | Runs Louvain algorithm, finds the best partition, and computes community statistics |
+| `polarization_metrics.py` | Computes user polarization metrics (e.g., polarization index ρ and polarization matrix) |
+| `echo_chamber_matrix.py` | Builds overlap matrices between user and domain communities; includes user-weight assignment for shared subreddits |
+| `distance_in_network.py` | Computes distances between topic groups or subreddits in validated networks |
+| `utils.py` | Helper functions for I/O, normalization, and data handling |
 
 
 ## Analysis pipeline
@@ -159,7 +159,7 @@ allowing all notebooks to run on a small, representative example.
 
 Each key corresponds to a structure used in the analysis:  
 - `user_subreddits`: dictionary mapping each user ID to the list of subreddits they commented on.  
-- `subreddit_labels`: mapping from subreddit name to political tag (e.g., Democrat, Conservative, Far-Left, Neutral).  
+- `subreddit_labels`: mapping from subreddit name to political tag (e.g., Democrat, Conservative, Ban).  
 
 These subsets are illustrative, not exhaustive.  
 They reproduce the schema and naming conventions used in the full datasets  

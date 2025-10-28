@@ -10,3 +10,4 @@ tqdm
 bicm
 plotly
 
+chord, sbm, infomap...

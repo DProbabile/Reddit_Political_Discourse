@@ -22,7 +22,7 @@ communities and the formation of echo chambers across interaction and informatio
 │ ├── user_normalization_dict.json
 │ ├── information_community_ex.pkl
 │ ├── interaction_community_ex.pkl
-| └── interaction_network_edgelist_ex.pkl
+| └── interaction_network_edgelist_ex.csv
 │
 ├── src/ # core modules (your code)
 │ ├── label_colors.py
@@ -35,7 +35,7 @@ communities and the formation of echo chambers across interaction and informatio
 ├── notebooks/
 │ ├── community_characteristics.ipynb 
 │ ├── polarization_analysis.ipynb
-│ ├── echo_chamber_validation.ipynb
+│ ├── echo_chamber.ipynb
 │ └── distance_analysis.ipynb
 │
 └── figures/ plots generated in notebooks
@@ -122,8 +122,13 @@ this repository includes small preprocessed subsets and auxiliary structures und
 | `users_subreddits_subset.parquet` | Bipartite user–subreddit interactions (comments or participation counts) |
 | `subreddit_labels.json` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
 | `user_normalization_dict.json` | Auxiliary dictionary for polarization-normalization |
-| `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community |
-| `interaction_network_edgelist_ex.pkl` | Validated subreddit–subreddit projection (edgelist) obtained from the users–subreddits bipartite network using BiCM |  
+| `information_community_ex.pkl` | dictionary mapping nodes to their detected community  
+obtained from statistically validated projections of the 2013 
+bipartite networks |
+| `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community  
+obtained from statistically validated projections of the 2013 
+bipartite networks |
+| `interaction_network_edgelist_ex.csv` | Validated subreddit–subreddit projection (edgelist) obtained from the users–subreddits bipartite network using BiCM |  
 
 obtained from statistically validated projections of the 2013 
 bipartite networks |

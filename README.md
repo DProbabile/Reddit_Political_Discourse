@@ -36,7 +36,7 @@ communities and the formation of echo chambers across interaction and informatio
 │ ├── 02_echo_chamber_validation.ipynb
 │ └── 03_distance_analysis.ipynb
 │
-└── figures/ # optional plots generated in notebooks
+└── figures/ -plots generated in notebooks
 ```
 ---
 
@@ -117,9 +117,8 @@ this repository includes small preprocessed subsets and auxiliary structures und
 | File | Description |
 |------|--------------|
 | `users_subreddits_subset.parquet` | Bipartite user–subreddit interactions (comments or participation counts) |
-| `subreddit_labels.df` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned, Neutral) |
-| `color_dict.json` | Color scheme associated with subreddit/community tags |
-| `user_normalization_dict.json` | Auxiliary dictionary for normalization or RCA binarization parameters |
+| `subreddit_labels.df` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
+| `user_normalization_dict.json` | Auxiliary dictionary for polarization-normalization |
 
 These files reproduce the internal structure used in the paper’s code base,  
 allowing all notebooks to run on a small, representative example.
@@ -174,7 +173,11 @@ please document them here using the same template.
 - Statistical validation:  
   - [bicm](https://pypi.org/project/bicm/) – for unweighted bipartite networks (BiCM)  
   - BiWCM module (weighted validation) – custom implementation used in this paper, not yet public.  
-    It extends BiCM to weighted bipartite projections; contact authors for access or replication details.  
+    It extends BiCM to weighted bipartite projections, following the maximum-entropy formulation  
+    introduced in *Buffa et al. (2025), "Maximum entropy modeling of Optimal Transport:  
+    the sub-optimality regime and the transition from dense to sparse networks"*  
+    ([arXiv:2504.10444](https://arxiv.org/abs/2504.10444)).  
+    Contact authors for access or replication details.
 
 - RCA filtering: activity normalization before validation  
 - Community detection: [NetworkX](https://networkx.org/), [igraph](https://igraph.org/python/), [Infomap](https://www.mapequation.org/), [graph-tool](https://graph-tool.skewed.de/)  

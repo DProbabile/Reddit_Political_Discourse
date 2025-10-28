@@ -103,7 +103,7 @@ All data used in this study are publicly available:
   [The Reddit Politosphere](10.1609/icwsm.v16i1.19377)
 
 - **Pushshift Reddit archives**  
-  [https://pushshift.io]([https://pushshift.io](https://arxiv.org/abs/2001.08435))
+  [Pushshift]([https://pushshift.io](https://arxiv.org/abs/2001.08435))
 
 Raw Reddit data are **not included** in this repository.
 

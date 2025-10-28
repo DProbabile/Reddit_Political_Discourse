@@ -20,7 +20,10 @@ communities and the formation of echo chambers across interaction and informatio
 │ ├── sample_subset/ # <--- minimal dataset for replication 
 │ │ ├── users_subreddits_subset.parquet
 │ │ ├── subreddit_labels.json
-| | └── user_normalization_dict.json
+│ │ ├── user_normalization_dict.json
+│ │ ├── information_community_ex.pkl
+| | └── interaction_community_ex.pkl
+
 │
 ├── src/ # core modules (your code)
 │ ├── label_colors.py
@@ -120,6 +123,12 @@ this repository includes small preprocessed subsets and auxiliary structures und
 | `users_subreddits_subset.parquet` | Bipartite user–subreddit interactions (comments or participation counts) |
 | `subreddit_labels.json` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
 | `user_normalization_dict.json` | Auxiliary dictionary for polarization-normalization |
+| `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community  
+obtained from statistically validated projections of the 2013 
+bipartite networks |
+| `information_community_ex.pkl` | dictionary mapping nodes to their detected community  
+obtained from statistically validated projections of the 2013 
+bipartite networks |
 
 These files reproduce the internal structure used in the paper’s code base,  
 allowing all notebooks to run on a small, representative example.

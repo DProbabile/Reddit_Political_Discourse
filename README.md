@@ -94,7 +94,7 @@ You can expand this area with additional notes or usage examples.
    - Apply KS and Mann–Whitney tests; visualize partitions and matrices.
 
 
-## 📚 Data availability
+## Data availability
 
 All data used in this study are publicly available:
 

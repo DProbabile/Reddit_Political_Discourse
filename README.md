@@ -33,6 +33,7 @@ communities and the formation of echo chambers across interaction and informatio
 │ └── utils.py
 │
 ├── notebooks/
+│ ├── bipartite_validation.ipynb 
 │ ├── community_characteristics.ipynb 
 │ ├── polarization_analysis.ipynb
 │ ├── echo_chamber.ipynb

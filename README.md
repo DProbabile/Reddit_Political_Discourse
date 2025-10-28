@@ -141,16 +141,17 @@ allowing all notebooks to run on a small, representative example.
 
 ### Example structures
 
-**Example 
-— user–subreddit bipartite data**
+**Example — user–subreddit bipartite data**
 
-| user_id | subreddit | num. comments 
-|----------|------------|----------|
-| u12345   | politics   | 42       | 
-| u45678   | The_Donald | 58       | 
-| u91011   | worldnews  | 6        |  
+| user_id | subreddit     | num_comments |
+|----------|---------------|--------------|
+| u12345   | politics      | 42           | 
+| u45678   | The_Donald    | 58           | 
+| u91011   | worldnews     | 6            |  
 
-— auxiliary dictionaries**
+---
+
+**Example — auxiliary dictionaries (JSON)**
 
 ```json
 {
@@ -158,9 +159,14 @@ allowing all notebooks to run on a small, representative example.
     "u12345": ["politics", "hillaryclinton", "worldnews"],
     "u45678": ["The_Donald", "conservative", "AskTrumpSupporters"],
     "u91011": ["socialism", "progressive", "NeutralPolitics"]
-   }
+  }
 }
 ```
+
+---
+
+**Example — subreddit tags (CSV)**
+
 ```csv
 subreddit,tag
 politics,Democrat

@@ -31,7 +31,7 @@ communities and the formation of echo chambers across interaction and informatio
 │ └── utils.py
 │
 ├── notebooks/
-│ ├── 00_quickstart.ipynb # example pipeline using subset data
+│ ├── 00_community_characteristics.ipynb 
 │ ├── 01_polarizarion_analysis.ipynb
 │ ├── 02_echo_chamber_validation.ipynb
 │ └── 03_distance_analysis.ipynb

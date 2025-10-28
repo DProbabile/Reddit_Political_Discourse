@@ -31,10 +31,10 @@ communities and the formation of echo chambers across interaction and informatio
 │ └── utils.py
 │
 ├── notebooks/
-│ ├── 00_community_characteristics.ipynb 
-│ ├── 01_polarizarion_analysis.ipynb
-│ ├── 02_echo_chamber_validation.ipynb
-│ └── 03_distance_analysis.ipynb
+│ ├── community_characteristics.ipynb 
+│ ├── polarizarion_analysis.ipynb
+│ ├── echo_chamber_validation.ipynb
+│ └── distance_analysis.ipynb
 │
 └── figures/ -plots generated in notebooks
 ```
@@ -118,7 +118,7 @@ this repository includes small preprocessed subsets and auxiliary structures und
 | File | Description |
 |------|--------------|
 | `users_subreddits_subset.parquet` | Bipartite user–subreddit interactions (comments or participation counts) |
-| `subreddit_labels.df` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
+| `subreddit_labels.json` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
 | `user_normalization_dict.json` | Auxiliary dictionary for polarization-normalization |
 
 These files reproduce the internal structure used in the paper’s code base,  

@@ -122,12 +122,8 @@ this repository includes small preprocessed subsets and auxiliary structures und
 | `users_subreddits_subset.parquet` | Bipartite user–subreddit interactions (comments or participation counts) |
 | `subreddit_labels.json` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
 | `user_normalization_dict.json` | Auxiliary dictionary for polarization-normalization |
-| `information_community_ex.pkl` | dictionary mapping nodes to their detected community  
-obtained from statistically validated projections of the 2013 
-bipartite networks |
-| `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community  
-obtained from statistically validated projections of the 2013 
-bipartite networks |
+| `information_community_ex.pkl` | dictionary mapping nodes to their detected community obtained from statistically validated projections of the 2013 domains-subreddits networks |
+| `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community obtained from statistically validated projections of the 2013 users-subreddits networks |
 | `interaction_network_edgelist_ex.csv` | Validated subreddit–subreddit projection (edgelist) obtained from the users–subreddits bipartite network using BiCM |  
 
 obtained from statistically validated projections of the 2013 

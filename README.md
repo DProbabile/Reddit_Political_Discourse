@@ -140,46 +140,71 @@ allowing all notebooks to run on a small, representative example.
 **Example 3 — auxiliary dictionaries**
 
 ```json
-{ - chuave user - elemento: elecon subreddit che utentei commenta
+{
+  "user_subreddits": {
+    "u12345": ["politics", "hillaryclinton", "worldnews"],
+    "u45678": ["The_Donald", "conservative", "AskTrumpSupporters"],
+    "u91011": ["socialism", "progressive", "NeutralPolitics"]
+  },
+  "subreddit_labels": {
+    "politics": "Democrat",
+    "hillaryclinton": "Democrat",
+    "The_Donald": "Conservative",
+    "conservative": "Conservative",
+    "socialism": "Far-Left",
+    "progressive": "Left",
+    "NeutralPolitics": "Neutral",
+    "worldnews": "Neutral"
+  }
+}
+```
 
-df: r/hillaryclinton - elemenot tag: Dem ...
- r/socialism - tag = Far-Left ...
+Each key corresponds to a structure used in the analysis:  
+- `user_subreddits`: dictionary mapping each user ID to the list of subreddits they commented on.  
+- `subreddit_labels`: mapping from subreddit name to political tag (e.g., Democrat, Conservative, Far-Left, Neutral).  
 
-These subsets are illustrative, not exhaustive.
-They reproduce the schema and naming conventions used in the full datasets,
-and can be extended seamlessly for large-scale analyses.
-
-If you create additional subsets (e.g. per year, or by domain category),
+These subsets are illustrative, not exhaustive.  
+They reproduce the schema and naming conventions used in the full datasets  
+and can be extended seamlessly for large-scale analyses.  
+If you create additional subsets (for example, per year or by domain category),  
 please document them here using the same template.
 
+---
 
+## External methods and references
 
-External methods and references
+- Statistical validation:  
+  - [bicm](https://pypi.org/project/bicm/) – for unweighted bipartite networks (BiCM)  
+  - BiWCM module (weighted validation) – custom implementation used in this paper, not yet public.  
+    It extends BiCM to weighted bipartite projections; contact authors for access or replication details.  
 
-Statistical validation: NEMtropy (BiCM / BiWCM)
+- RCA filtering: activity normalization before validation  
+- Community detection: [NetworkX](https://networkx.org/), [igraph](https://igraph.org/python/), [Infomap](https://www.mapequation.org/), [graph-tool](https://graph-tool.skewed.de/)  
+- Statistical tests: [SciPy](https://scipy.org/)  
+- Visualization: Matplotlib, Plotly, Sankey diagrams, chord plots  
 
-RCA filtering: activity normalization before validation
+---
 
-Community detection: NetworkX
-, igraph
-, Infomap
-, graph-tool
+## Reproducibility notes
 
-Statistical tests: SciPy
+Random seeds fixed for community detection.  
+FDR correction applied to validated links and overlap matrices.  
+Results consistent across detection algorithms (Louvain, Infomap, SBM).  
+BiWCM implementation available upon request for reproducibility purposes.
 
-Visualization: Matplotlib, Plotly, Sankey diagrams, chord plots
+---
 
+## Citation
 
+If you use this code, please cite:
 
-Reproducibility notes
+```
+@article{CirulliEtAl2025_RedditPolarization,
+  title   = {Polarization and Echo Chambers in Reddit’s Political Discourse},
+  author  = {Cirulli, Daniele and Desiderio, Antonio and Cimini, Giulio and Saracco, Fabio},
+  year    = {2025},
+  journal = {arXiv preprint},
+  note    = {arXiv:to-be-added}
+}
+```
 
-Random seeds fixed for community detection.
-
-FDR correction applied to validated links and overlap matrices.
-
-Results consistent across detection algorithms (Louvain, Infomap, SBM).
-
-
-Citation
-
-If you use this code, please cite: ... 

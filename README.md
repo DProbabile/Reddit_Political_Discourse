@@ -100,10 +100,10 @@ You can expand this area with additional notes or usage examples.
 All data used in this study are publicly available:
 
 - **Reddit Politosphere dataset (2013–2017)**  
-  [https://zenodo.org/record/5154892](https://zenodo.org/record/5154892)
+  [The Reddit Politosphere](10.1609/icwsm.v16i1.19377)
 
 - **Pushshift Reddit archives**  
-  [https://pushshift.io](https://pushshift.io)
+  [https://pushshift.io]([https://pushshift.io](https://arxiv.org/abs/2001.08435))
 
 Raw Reddit data are **not included** in this repository.
 
@@ -180,11 +180,12 @@ please document them here using the same template.
     ([arXiv:2504.10444](https://arxiv.org/abs/2504.10444)).  
     Contact authors for access or replication details.
 
-- RCA filtering: activity normalization before validation
-- FDR correction: 
+- [RCA](https://doi.org/10.1111/j.1467-9957.1965.tb00050.x) filtering: activity normalization before validation 
+- [FDR](http://www.jstor.org/stable/2346101) correction
 - Community detection: [NetworkX](https://networkx.org/), [igraph](https://igraph.org/python/), [Infomap](https://www.mapequation.org/), [graph-tool](https://graph-tool.skewed.de/)  
 - Statistical tests: [SciPy](https://scipy.org/)  
-- Visualization: Matplotlib, Plotly, Sankey diagrams, chord plots  
+- Visualization: [Matplotlib](https://matplotlib.org), [Plotly](https://plotly.com/python/), [Gephi](http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154), [d3blocks](https://github.com/d3blocks/d3blocks)(https://github.com/d3blocks/d3blocks)]
+  
 
 ---
 
@@ -192,7 +193,7 @@ please document them here using the same template.
 
 Random seeds fixed for community detection.  
 FDR correction applied to validated links and overlap matrices.  
-Community detection results consistent across detection algorithms (Louvain, Infomap, SBM).  
+Community detection results consistent across detection algorithms (Louvain, Infomap, SBM[https://graph-tool.skewed.de]).  
 BiWCM implementation available upon request for reproducibility purposes.
 
 ---

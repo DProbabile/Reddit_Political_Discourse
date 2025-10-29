@@ -21,6 +21,7 @@ communities and the formation of echo chambers across interaction and informatio
 │ ├── Subreddit_Tags.csv
 │ ├── Tag_Color.csv
 │ ├── user_normalization_dict.json
+│ ├── ActiveUsers_perSubreddit.pkl
 │ ├── information_community_ex.pkl
 │ ├── interaction_community_ex.pkl
 | └── interaction_network_edgelist_ex.csv
@@ -125,6 +126,7 @@ this repository includes small preprocessed subsets and auxiliary structures und
 | `Subreddit_Tags.csv` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
 | `Tag_Color.csv` | Color mapping for topic tags |
 | `user_normalization_dict.json` | Auxiliary dictionary for polarization-normalization |
+| `ActiveUsers_perSubreddit.pkl` | Active user counts per subreddit and year |
 | `information_community_ex.pkl` | dictionary mapping nodes to their detected community obtained from statistically validated projections of the 2013 domains-subreddits networks |
 | `interaction_community_ex.pkl` | dictionary mapping nodes to their detected community obtained from statistically validated projections of the 2013 users-subreddits networks |
 | `interaction_network_edgelist_ex.csv` | Validated subreddit–subreddit projection (edgelist) obtained from the users–subreddits bipartite network using BiCM |  

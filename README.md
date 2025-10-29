@@ -122,7 +122,7 @@ this repository includes small preprocessed subsets and auxiliary structures und
 
 | File | Description |
 |------|--------------|
-| `users_subreddits_subset.parquet` | Bipartite user–subreddit interactions (comments or participation counts) |
+| `users_subreddits_subset.parquet` | Bipartite user–subreddit interaction data  (comment, 2013 subset) |
 | `Subreddit_Tags.csv` | Mapping of subreddits → political tag (e.g. Democrat, Republican, Banned...) |
 | `Tag_Color.csv` | Color mapping for topic tags |
 | `user_normalization_dict.json` | User-normalization dictionary from the 2013 dataset |

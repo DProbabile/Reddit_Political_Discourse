@@ -20,7 +20,7 @@ communities and the formation of echo chambers across interaction and informatio
 │ ├── users_subreddits_subset.parquet
 │ ├── Subreddit_Tags.csv
 │ ├── Tag_Color.csv
-│ ├── user_normalization_dict.json
+│ ├── user_normalization_dict.json.gzip
 │ ├── ActiveUsers_perSubreddit.pkl
 │ ├── information_community_ex.pkl
 │ ├── interaction_community_ex.pkl

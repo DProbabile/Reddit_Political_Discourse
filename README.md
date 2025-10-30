@@ -1,7 +1,8 @@
 # Polarization and Echo Chambers in Reddit’s Political Discourse
 
 **Cirulli, Desiderio, Cimini, Saracco (2025)**  
-*Polarization and echo chambers in Reddit’s political discourse.*
+
+**Warning:** The code for this project will be available soon!
 
 This repository provides the computational framework used in the study.  
 We analyse Reddit political discussions (2013–2017) through bipartite networks linking

@@ -2,7 +2,7 @@
 
 **Cirulli, Desiderio, Cimini, Saracco (2025)**  
 
-**Warning:** The code for this project will be available soon!
+**Note:** The code for this project will be made publicly available soon.
 
 This repository provides the computational framework used in the study.  
 We analyse Reddit political discussions (2013–2017) through bipartite networks linking

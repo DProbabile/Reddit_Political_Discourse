@@ -1,6 +1,11 @@
 # Polarization and Echo Chambers in Reddit’s Political Discourse
 
-**Cirulli, Desiderio, Cimini, Saracco (2025)**  
+
+**Daniele Cirulli, Antonio Desiderio, Giulio Cimini, Fabio Saracco (2025)**  
+[Read the paper on arXiv](https://arxiv.org/abs/2510.27467)  
+*Physics and Society (physics.soc-ph)*
+
+---
 
 **Note:** The code for this project will be made publicly available soon.
 
@@ -228,12 +233,14 @@ BiWCM implementation available upon request for reproducibility purposes.
 If you use this code, please cite:
 
 ```
-@article{CirulliEtAl2025_RedditPolarization,
-  title   = {Polarization and Echo Chambers in Reddit’s Political Discourse},
-  author  = {Cirulli, Daniele and Desiderio, Antonio and Cimini, Giulio and Saracco, Fabio},
-  year    = {2025},
-  journal = {arXiv preprint},
-  note    = {arXiv:to-be-added}
+@misc{cirulli2025polarizationechochambersreddits,
+      title={Polarization and echo chambers in Reddit's political discourse}, 
+      author={Daniele Cirulli and Antonio Desiderio and Giulio Cimini and Fabio Saracco},
+      year={2025},
+      eprint={2510.27467},
+      archivePrefix={arXiv},
+      primaryClass={physics.soc-ph},
+      url={https://arxiv.org/abs/2510.27467}, 
 }
 ```
 

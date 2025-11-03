@@ -1,3 +1,4 @@
+#label_colors.py
 
 # ======================
 # LABEL ASSIGNMENT
@@ -12,7 +13,7 @@ def Label_from_list(lista, DizValTag):
     lista : list
         List of subreddit names belonging to the community.
     DizValTag : dict
-        Dictionary mapping tag_subreddit -> value (e.g., 'Left_politics': 0.8).
+        Mapping 'tag_subreddit' -> value (e.g., 'Left_politics': 0.8).
 
     Returns
     -------
@@ -26,45 +27,42 @@ def Label_from_list(lista, DizValTag):
     dizntag = {}
     politic = 0
 
-    # initialize tags
     for col in csvdf2.columns[1:]:
         dizntag[col] = 0
 
-    # accumulate tag weights
     for i in lista:
         for col in csvdf2.columns[1:]:
-            if f"{col}_{i}" in DizValTag:
+            key = f"{col}_{i}"
+            if key in DizValTag:
                 if col != "Politic":
-                    dizntag[col] += DizValTag[f"{col}_{i}"]
+                    dizntag[col] += DizValTag[key]
                 else:
-                    politic += DizValTag[f"{col}_{i}"]
+                    politic += DizValTag[key]
 
     MAX = max(dizntag, key=dizntag.get)
     res = MAX
     dizntag["Politic"] = politic
-    T = False
-    Others = []
+
     rank = {}
-
     for col in csvdf2.columns[1:]:
-        if dizntag[col] >= PurTh * dizntag[MAX] and col != MAX:
-            if dizntag[col] >= AbsTh:
-                rank[col] = dizntag[col]
-                T = True
+        if dizntag[col] >= PurTh * dizntag[MAX] and col != MAX and dizntag[col] >= AbsTh:
+            rank[col] = dizntag[col]
 
-    for col in sorted(rank, key=rank.get, reverse=True):
-        Others.append(col)
-
-    if T:
+    Others = sorted(rank, key=rank.get, reverse=True)
+    if Others:
         for o in Others:
             if o != "Politic":
                 res += f"/{o}"
         if len(Others) <= PolTh and "Politic" in Others:
             res += "/Politic"
-        return res
-    else:
-        return res
 
+    return res
+
+
+
+# ======================
+# COLOR ASSIGNMENT
+# ======================
 
 # ======================
 # COLOR ASSIGNMENT
@@ -79,11 +77,12 @@ def Color_from_list(lista, DizValTag):
     lista : list
         List of subreddit names in the community.
     DizValTag : dict
-        Mapping of tag_subreddit to contribution weight.
+        Mapping 'tag_subreddit' -> weight value.
 
     Returns
     -------
-    colore_somma_pesato : tuple (R, G, B)
+    colore_somma_pesato : tuple
+        Weighted RGB color of the community.
     """
     PurTh = 0.5
     PolTh = 10
@@ -98,35 +97,28 @@ def Color_from_list(lista, DizValTag):
 
     for i in lista:
         for col in csvdf2.columns[1:]:
-            if f"{col}_{i}" in DizValTag:
+            key = f"{col}_{i}"
+            if key in DizValTag:
                 if col != "Politic":
-                    dizntag[col] += DizValTag[f"{col}_{i}"]
+                    dizntag[col] += DizValTag[key]
                 else:
-                    politic += DizValTag[f"{col}_{i}"]
+                    politic += DizValTag[key]
 
     MAX = max(dizntag, key=dizntag.get)
     colori_pesati.append((Color_Field[MAX], dizntag[MAX]))
     dizntag["Politic"] = politic
-    T = False
-    Others = []
+
     rank = {}
-
     for col in csvdf2.columns[1:]:
-        if dizntag[col] >= PurTh * dizntag[MAX] and col != MAX:
-            if dizntag[col] >= AbsTh:
-                rank[col] = dizntag[col]
-                T = True
+        if dizntag[col] >= PurTh * dizntag[MAX] and col != MAX and dizntag[col] >= AbsTh:
+            rank[col] = dizntag[col]
 
-    for col in sorted(rank, key=rank.get, reverse=True):
-        Others.append(col)
-
-    if T:
+    Others = sorted(rank, key=rank.get, reverse=True)
+    if Others:
         for o in Others:
             if o != "Politic":
                 colori_pesati.append((Color_Field[o], dizntag[o]))
         if len(Others) <= PolTh and "Politic" in Others:
             colori_pesati.append((Color_Field["Politic"], dizntag["Politic"] * 0.1))
-        return somma_colori_pesati(colori_pesati)
-    else:
-        return somma_colori_pesati(colori_pesati)
 
+    return somma_colori_pesati(colori_pesati)

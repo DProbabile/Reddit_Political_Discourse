@@ -1,3 +1,5 @@
+#community_detection.py
+
 def AllLouv(newP):
     """Run multiple Louvain community detections with random node shuffling
     and return average statistics and best partition."""

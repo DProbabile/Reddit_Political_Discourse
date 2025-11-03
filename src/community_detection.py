@@ -1,9 +1,34 @@
-#community_detection.py
+# ============================================
+# community_detection.py
+# ============================================
 
 def AllLouv(newP):
-    """Run multiple Louvain community detections with random node shuffling
-    and return average statistics and best partition."""
+    """
+    Run multiple Louvain community detections with random node shuffling
+    and return average statistics and the best partition.
 
+    Parameters
+    ----------
+    newP : networkx.Graph
+        Input graph.
+
+    Returns
+    -------
+    modmed : float
+        Mean modularity across iterations.
+    errmodmed : float
+        Standard error of modularity.
+    compmed : float
+        Mean number of communities.
+    errcompmed : float
+        Standard error of number of communities.
+    modmax : float
+        Maximum modularity value.
+    numcompmodmax : int
+        Number of communities in the best partition.
+    partizmax : dict
+        Best partition mapping community_id → list of nodes.
+    """
     num_iterazioni = 200
     dzNlouv = {}
     Nmod = np.zeros(num_iterazioni)
@@ -43,4 +68,3 @@ def AllLouv(newP):
     print(compmed, errcompmed)
 
     return modmed, errmodmed, compmed, errcompmed, modmax, numcompmodmax, partizmax
-

@@ -25,3 +25,4 @@ pickle
 squilte3
 json5
 tqdm
+copy

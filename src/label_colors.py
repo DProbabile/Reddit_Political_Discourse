@@ -4,6 +4,23 @@
 # LABEL ASSIGNMENT
 # ======================
 
+import pandas as pd
+import sys 
+from pathlib import Path
+from utils import somma_colori_pesati, nome_colore_to_esadecimale   
+DATA = Path(__file__).resolve().parents[1] / "data"
+
+# === Load data ===
+csvdf2 = pd.read_csv(DATA / "Subreddit_Tags.csv")
+Color_Field_df = pd.read_csv(DATA / "Tag_Color.csv")
+
+Color_Field = {} #ricreo 
+for i in range(len(Color_Field_df)) :
+    tag = Color_Field_df['Tag'][i]
+    color = Color_Field_df['Color'][i]
+    Color_Field[tag] = color
+print(Color_Field)
+
 def Label_from_list(lista, DizValTag):
     """
     Assigns a combined label to a community based on tag contributions.

@@ -1,6 +1,11 @@
 # ============================================
 # polarization_metrics.py
 # ============================================
+import numpy as np
+import copy
+from tqdm import tqdm
+import numpy as np
+
 
 def compute_polarization_matrix(user_data, TAGS, tag_idx, valori_normtag_valid, TagvaluesPerYear, year_label="unknown"):
     """

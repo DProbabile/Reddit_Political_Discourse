@@ -7,13 +7,25 @@
 # RCA BINARIZATION
 # ======================
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+import matplotlib.colors as mcolors
+import plotly.graph_objects as go
+import sys 
+from pathlib import Path
+
+FIGS = Path(__file__).resolve().parents[1] / "figures"
+
+
+
 def rca(matrix):
     world = np.sum(matrix, 0) / np.sum(matrix)
     return np.array([(row / sum(row)) / world for row in matrix])
 
 def RCA_binarize(exp_mat, threshold=1):
     return np.array(np.where(rca(exp_mat) > threshold, 1, 0))
-
 
 # ======================
 # COLOR UTILITIES
@@ -107,7 +119,8 @@ def plot_diagramma_radar_multiple(liste_valori, colori, labels, titolo):
         legend=dict(x=1.10, y=1, xanchor="left", yanchor="top", font=dict(size=12)),
         width=850,
         height=650
-    )
+    ) #save Interaction_Radar_2013.pdf
+    fig.write_image(FIGS / "Interaction_Radar_2013.pdf")
     fig.show()
 
 

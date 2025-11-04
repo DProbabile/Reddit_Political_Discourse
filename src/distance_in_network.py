@@ -2,6 +2,10 @@
 # distance_in_network.py
 # ============================================
 
+import networkx as nx
+import numpy as np
+import math
+
 def harmonic_mean_distance(G, node_list1, node_list2=None):
     """
     Compute the harmonic mean distance (1/d) between pairs of nodes.
